@@ -6,6 +6,6 @@ angular.module('myApp', [])
     .controller('MainCtrl', function($scope){
 
         $scope.percent = 0;
-        
+
 
     });
