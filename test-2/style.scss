@@ -1,0 +1,38 @@
+// main settings
+$mainWidth: 1000px;
+
+// article settings
+$articleWidth: 700px;
+$articleBorderColor: #143c50;
+$articleBorderWidth: 2px;
+$articleBorderType: solid;
+$radius: 10px;
+
+// border radius
+
+@mixin border-radius($radius){
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// --------------
+// CSS
+
+main {
+  margin: 0 auto;
+  width: $mainWidth
+}
+
+article {
+  width: $articleWidth;
+  border: $articleBorderWidth $articleBorderType $articleBorderColor;
+  @include border-radius($radius);
+  float: left;
+}
+
+aside {
+  width: $mainWidth - $articleWidth - (2 * $articleBorderWidth);
+}
